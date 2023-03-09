@@ -1,0 +1,137 @@
+/*root - criar variaveis*/
+:root{
+/*Acessar o Figma.
+ Conseguimos ver que tem a cor branca nos títulos das frases.
+ Tem a cor azul do botão. Na descrição geralmente é uma cor cinza e tem o fundo da tela que é um preto, um azul escuro*/
+    --branco-principal: #FFFFFF;
+    --cinza-secundario:#C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3f79be;
+}
+
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);/*A propriedade font-family especifica a fonte de um elemento.*/
+    font-size: 16px; /*Define o tamanho da fonte para um tamanho fixo em px, cm, etc*/
+    font-weight: 400; /*define como caracteres grossos ou finos no texto devem ser exibidos, é interpolado com passos discretos (múltiplos de 100). */
+
+}
+
+* { 
+    margin: 0;        /*MARGEM - propriedade margin do CSS define a área de margem nos quatro lados do elemento.Margins realmente criam espaço ao redor do elemento */
+    padding: 0;       /*PREENCHIMENTO -  A propriedade padding define uma a distância entre o conteúdo de um elemento e suas bordas,padding afasta o conteúdo da borda e não um elemento do outro.*/
+}
+.principal {  /*especifica uma imagem (dos rostos dos professores)a ser usada como plano de fundo de um elemento.*/
+    background-image: url("img/Background.png");
+    background-repeat: no-repeat; /* a img a espelhando essa função nao se espelha*/
+    background-size: contain; /*essa tag = Se o background-size é contain ou cover: A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai. (ajusto a imd dos professores para direita)*/
+    align-items: center; /*Centralizar tudo isso no centro da página da section - alinhado com a página -ele vai alinhar ao centro dessa coluna*/
+    text-align: center; /* alinhar todo esse texto no centro também-todo o texto está alinhado, mas também a imagem - Ele funciona alinhando ao centro tudo o que está dentro de um elemento de bloco.*/
+}
+.container { /*O container é um componente que garante que o seu layout vai ficar alinhado corretamente na página. Ele pode definir as margens laterais da página, ou deixar sem margens*/
+    height: 100vh; /* ajustei a altura da (img/Background.png)*/
+    display: grid;/*griddo CSS é uma abreviação das propriedades que definem todas as propriedades da grade explicitamente ( grid-template-rows, grid-template-columns, e grid-template-areas (en-US) ), e todas as propriedades implícitas da grade ( grid-auto-rows (en-US) , grid-auto-columns (en-US) , e grid-auto-flow) , em uma única declaração.*/
+    grid-template-columns: 50% 50%; /*define os nomes das linhas e funções de dimensionamento*/
+
+
+}
+.container__botao{  /* ajustando botao azul*/
+    background-color: var(--botao-azul); /* cor de fundo*/
+    border-radius: 5px ;/* ajustanfo as bordas "Arrendondadas*/
+    padding: 1em;/*padding que é tipo uma margem interna,  define uma a distância entre o conteúdo de um elemento e suas bordas. */
+    color: var(--branco-principal);
+    display:block;
+    text-decoration: none;/*tirando o sublinahdo do texto*/
+    margin-bottom: 1em; /*separar os botões e o aviso*/
+}
+.botao_secundario {   /* O botão secundarios é o (Assinar somente o Alura+)*/
+   background-color: transparent;
+    border: 2px solid var(--branco-principal);  /* borda*/
+}
+.container_aviso { 
+    font: size 12px;/*Defina o tamanho da fonte para diferentes elementos:*/
+    color: var(--cinza-secundario);
+}
+
+.container__titulo{
+    font-size:28px; /*A propriedade font-size é usada para indicar o tamanho da letra(fonte) em CSS. */
+    font-weight:700;/*A propriedade font-weight do CSS é usada para definir o peso ou espessura da fonte*/
+}
+.container__imagem{
+margin: 1em 0 2em 0;
+}
+.container__caixa { 
+    margin: 0 6em;  /*espaçamento entre a esquerda e a direita do conteudo escrito e botoes.*/
+}
+.secundario__imagem{
+
+    width: 80%;/*largura*/
+}
+.secundario{
+    align-items:center;
+    margin: 0 10em;
+}
+.descricao__titulo{ /*Assita do seu jeito*/
+    font-weight:700;/*define como caracteres grossos ou finos no texto devem ser exibidos*/
+    font-size: 48px;/*define o tamanho da fonte */
+    color: var(--branco-principal);/*cor do titulo*/
+    margin-bottom: 0.1em;/*define a área de margem na parte inferior de um elemento. Um valor positivo o coloca mais longe de seus vizinhos*/
+}
+.descrição__texto{
+    color: var(--cinza-secundario)
+}
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+container.descricao { 
+    padding: 2em;
+}
+.dispositivos__lista { 
+    display: flex; /*Ele fez todos os itens ficarem um do lado do outro em uma linha.(Tv.Computador ,celular (as imagem))*/
+    justify-content: center;/*alinha os itens do contêiner flexível*/
+    list-style-type: none;/* tipo de marcador de item de lista em uma lista e (none:Remove um elemento do layout da página inteiramente, como se ele não estivesse lá)*/
+    margin: 5em 0;
+}
+.dispositivos {
+    text-align: center; /*ele pegou todas a section despositivos e Centralizou (Disponivel nos seus dispositivos favoritos) e os itens tb centralizou tv,celular,computador*/
+}
+.dispositivos__titulo {
+    font-size: 48px; /*tamanho fonte*/
+    color: var(--branco-principal);
+}
+.dispositivos__lista{
+    font-size: 32px;
+    color: var(--branco-principal);
+    
+}
+
+.rodape {
+    text-align: center;
+    margin: 0 3em;
+    line-break: auto;
+}
+.rodape__logo{
+    margin-bottom: 2em;
+}
+.lista__link a:hover{
+    color: var(--botao-azul);
+
+}
+.lista__link a:active{
+color: purple;
+}
+.container__botao:hover{
+background-color: var(--botao-azul-efeito);
+color: var(--cor-de-fundo);
+
+}
+.lista__link{
+    list-style-type: none;
+    display: inline-flex;
+    margin: 0 0.3em;
+   
+}
